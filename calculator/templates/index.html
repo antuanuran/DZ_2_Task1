@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №2 (Джанго)_Книга блюд</title>
+</head>
+<body>
+<h1 style="color: Teal"> Ингридиенты для вашего блюда </h1>
+
+<p style="color: blue"> Название блюда: {{ meal }} </p>
+<p style="color: blue"> Количество порций: {{ porcia }} </p>
+
+{% if porcia == 0 %}
+<b style="color: red">{{ message }}</b>
+{% endif %}
+
+
+{% for key,value in recipe.items %}
+    <p style="color: Teal">{{ key }} : {{ value }}</p>
+
+{% endfor %}
+
+
+</body>
+</html>
+
